@@ -15,10 +15,17 @@
     <%= yield %>
     <script type="text/javascript" charset="utf-8">
       $(function() {
+        Pusher.log = function(message) {
+          if (window.console && window.console.log) {
+            window.console.log(message);
+          }
+        };
+
         var pusher = new Pusher('fb32d1269e983edd3760'); // Replace with your app key
         var channel = pusher.subscribe('client-open');
         channel.bind('new_message', function(data) {
-          alert("I'm going to change your background color to "+data.color);
+          alert("I'm going to change your background color to #"+data.color);
+          $("#appended").append("I'm going to change your background color to "+data.color);
           $(".color").css('background-color', '#'+data.color);
         });
 
