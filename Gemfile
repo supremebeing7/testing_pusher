@@ -23,8 +23,9 @@ gem 'jquery-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
-gem 'pusher-client'
+gem 'pusher'
 gem 'haml'
+gem 'dotenv'
 
 group :development do
   gem 'better_errors'

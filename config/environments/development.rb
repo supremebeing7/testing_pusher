@@ -26,4 +26,9 @@ Testing::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+  require 'pusher'
+  Pusher.logger = Rails.logger
+  Pusher.app_id = 73869
+  Pusher.key = 'fb32d1269e983edd3760'
+  Pusher.secret = '0537d49226b7a2106aa2'
 end

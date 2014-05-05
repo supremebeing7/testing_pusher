@@ -9,6 +9,7 @@ class SwitchesController < ApplicationController
   def update
     @switch = Switch.first
     @switch.update(color: params[:switch][:color])
+    Pusher['client-open'].trigger('new_message', {:color => @switch.color})
     redirect_to :back
   end
 end
