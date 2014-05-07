@@ -26,6 +26,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'pusher'
 gem 'haml'
 gem 'dotenv'
+gem 'rerun'
 
 group :development do
   gem 'better_errors'
