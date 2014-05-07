@@ -1,4 +1,4 @@
 Testing::Application.routes.draw do
   resources :switches
-  root "switches#home"
+  root "switches#show"
 end
