@@ -28,7 +28,7 @@ Testing::Application.configure do
   config.assets.debug = true
   require 'pusher'
   Pusher.logger = Rails.logger
-  Pusher.app_id = 73869
-  Pusher.key = 'fb32d1269e983edd3760'
-  Pusher.secret = '0537d49226b7a2106aa2'
+  Pusher.app_id = ENV['PUSHER_APP_ID']
+  Pusher.key = ENV['PUSHER_KEY']
+  Pusher.secret = ENV['PUSHER_SECRET']
 end

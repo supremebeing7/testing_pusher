@@ -21,7 +21,7 @@
           }
         };
 
-        var pusher = new Pusher('fb32d1269e983edd3760'); // Replace with your app key
+        var pusher = new Pusher('9572fa5b734b8b107bcc'); // Replace with your app key
         var channel = pusher.subscribe('client-open');
         channel.bind('new_message', function(data) {
           alert("I'm going to change your background color to #"+data.color);

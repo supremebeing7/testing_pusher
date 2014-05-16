@@ -25,10 +25,10 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'pusher'
 gem 'haml'
-gem 'dotenv'
 gem 'rerun'
 
 group :development do
+  gem 'dotenv-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
 end
